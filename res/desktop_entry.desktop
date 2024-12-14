@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=NetSpeed
+Comment=A cosmic netspeed applet
+Keywords=Cosmic;Iced;network;
+Icon=io.github.khanra17.cosmic-ext-applet-netspeed-symbolic
+Categories=Cosmic;Iced;
+Type=Application
+Exec=cosmic-ext-applet-netspeed
+Terminal=false
+StartupNotify=true
+NoDisplay=true
+X-CosmicApplet=true
+X-CosmicHoverPopup=Auto

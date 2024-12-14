@@ -1,0 +1,30 @@
+[package]
+name = "cosmic-ext-applet-netspeed"
+version = "0.1.0"
+authors = ["khanra17 <suman8khanra@gmail.com>"]
+edition = "2021"
+license = "GPL-3.0"
+homepage = "https://github.com//khanra17/cosmic-ext-applet-netspeed/"
+repository = "https://github.com//khanra17/cosmic-ext-applet-netspeed.git"
+rust-version = "1.83"
+
+[dependencies]
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = [
+    "fmt",
+    "env-filter",
+    "ansi",
+] }
+tracing-log = "0.2.0"
+[dependencies.libcosmic]
+git = "https://github.com/pop-os/libcosmic"
+default-features = false
+features = [
+    "applet",
+    "tokio",
+    "wayland",
+]
+
+[profile.release-lto]
+inherits = "release"
+lto = "fat"
